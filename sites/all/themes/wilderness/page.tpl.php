@@ -22,7 +22,8 @@
         <div class="Sheet-body">
           <div class="Header">
 			<div id="slogan-stdm">
-				<p>Experienta, Dedicatiem Profesionalism.</p>
+				<p class="firm-description">Experienta, Dedicatiem Profesionalism:</p>
+				<p class="firm-name"><strong>Unitatea de suport pentru integrare</strong></p>
 			</div>
             <div class="logo">
               <?php if ($logo): ?>
