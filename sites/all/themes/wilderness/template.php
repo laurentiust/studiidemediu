@@ -1,6 +1,4 @@
 <?php
-// $Id $
-
 require_once("common_methods.php");
 
 function get_full_path_to_theme() {
@@ -12,7 +10,6 @@ function get_full_path_to_theme() {
  *
  * @ingroup themeable
  */
-
 function wilderness_menu_local_task($variables) {
   $link = $variables['element']['#link'];
   $link_text = $link['title'];
@@ -20,7 +17,6 @@ function wilderness_menu_local_task($variables) {
   if (!empty($variables['element']['#active'])) {
     // Add text to indicate active tab for non-visual users.
     $active = '<span class="element-invisible">' . t('(active tab)') . '</span>';
-    
     // If the link does not contain HTML already, check_plain() it now.
     // After we set 'html'=TRUE the link will not be sanitized by l().
     if (empty($link['localized_options']['html'])) {
@@ -29,12 +25,10 @@ function wilderness_menu_local_task($variables) {
     $link['localized_options']['html'] = TRUE;
     $link_text = t('!local-task-title!active', array('!local-task-title' => $link['title'], '!active' => $active));
   }
-  
+
   $link['localized_options']['html'] = TRUE;
+
   return '<li' . (!empty($variables['element']['#active']) ? ' class="active"' : '') . '>' . l('<span class="btn"><span class="l"></span><span class="r"></span><span class="t">' . $link_text  . '</span><span>', $link['href'],  array('attributes' => array('id' => 'Button'), 'html'=>TRUE)) . "</li>\n";
-
-
- 
 }
 
 function wilderness_menu_link(array $variables) {
@@ -55,7 +49,6 @@ function wilderness_menu_link(array $variables) {
  *
  * @ingroup themeable
  */
-
 function wilderness_menu_local_tasks(&$variables) {
   $output = '';
 
@@ -81,7 +74,6 @@ function wilderness_menu_local_tasks(&$variables) {
  *
  * @ingroup themeable
  */
-
 function wilderness_button($variables) {
   $element = $variables['element'];
   $element['#attributes']['type'] = 'submit';
@@ -101,12 +93,12 @@ function wilderness_button($variables) {
   }
 
   return '<button type="submit" ' . (empty($element['#name']) ? '' : 'name="' . $element['#name']
-         . '" ')  . 'id="' . $element['#id'] . '" value="' . check_plain($element['#value']) . '" ' . drupal_attributes($element['#attributes']) . '>'
-         . '<span class="btn">'
-         . '<span class="l"></span>'
-         . '<span class="r"></span>'
-         . '<span class="t">' . check_plain($element['#value']) . '</span>'
-         . '</span></button>';
+    . '" ') . 'id="' . $element['#id'] . '" value="' . check_plain($element['#value']) . '" ' . drupal_attributes($element['#attributes']) . '>'
+    . '<span class="btn">'
+    . '<span class="l"></span>'
+    . '<span class="r"></span>'
+    . '<span class="t">' . check_plain($element['#value']) . '</span>'
+    . '</span></button>';
 
 }
 
