@@ -1393,3 +1393,7 @@ ul li.collapsed, ul li.leaf {
 .field-slideshow-wrapper {
     text-align: center;
 }
+
+.node-readmore a {
+   text-decoration: none;
+}
