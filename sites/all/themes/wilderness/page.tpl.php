@@ -80,7 +80,7 @@
       <div class="cleared"></div>
       <div class="Footer">
         <div class="Footer-inner" style="float: left;">
-          <div class="Footer-text"><p>Unitatea de suport pentru integrare Ⓡ 2013 </p>          </div>
+          <div class="Footer-text"><p>Unitatea de suport pentru integrare Ⓡ 2013 </p></div>
           <div class="Footer-background"></div>
         </div>
       </div>
