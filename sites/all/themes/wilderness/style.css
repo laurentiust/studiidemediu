@@ -4,7 +4,8 @@
 
 body {
     margin: 0 auto;
-    padding: 0;
+    padding-top: 25px;
+    padding-left: 25px;
     background-color: #C5C9AB;
     background-image: url('images/Page-BgTexture.jpg');
     background-repeat: repeat-x;
@@ -207,8 +208,8 @@ div.Header {
 }
 
 #slogan-stdm .firm-name {
-    margin-top: -15px;
-    margin-left: 90px;
+    margin-top: -25px;
+    margin-left: 120px;
 }
 
 /* end Logo */
@@ -303,7 +304,7 @@ div.Header {
 /* menu structure */
 
 .region-navigation .menu {
-    padding: 10px 10px 2px 55px;
+    padding: 10px 10px 2px 25px;
     margin-bottom: 2px;
 }
 
@@ -955,11 +956,11 @@ a#Button .btn.active .l, a#Button .btn.active .r, button.Button .btn.active .l, 
     text-align: center;
 }
 
-.PageBackgroundGlare .social-links-container {
+.Main .social-links-container {
     position: fixed;
 }
 
-.PageBackgroundGlare .social-links-container .social-links {
+.Main .social-links-container .social-links {
     position: static;
     float: left;
     margin-left: 2em;
@@ -1396,4 +1397,54 @@ ul li.collapsed, ul li.leaf {
 
 .node-readmore a {
    text-decoration: none;
+}
+
+.active {
+    color: #cccccc;
+}
+
+.view-display-id-page_1 .field-content {
+    text-align: justify;
+    line-height: 17px;
+}
+
+.view-display-id-page_1 .views-field-created{
+    margin-top: -10px;
+    float: right;
+    font-weight: bold;
+}
+
+.view-display-id-page_1 .views-field-title .field-content a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.view-display-id-page_1 .views-row {
+    margin-bottom: 20px;
+    border: 1px solid #007700;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.search-info {
+    display: none;
+}
+
+.BlockContent .view-id-news .field-content a {
+    margin-left: 10px;
+    margin-top: -10px;
+}
+
+.BlockContent .view-id-news .views-field-title {
+    margin-top: -5px;
+    margin-bottom: 15px;
+}
+
+.BlockContent .view-id-news .views-field-created {
+    font-weight: bold;
+}
+
+.old-logo {
+    margin-top: -15px;
+    margin-left: 20px;
 }

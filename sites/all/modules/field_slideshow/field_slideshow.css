@@ -1,41 +1,52 @@
 .field-slideshow {
-  overflow: hidden;
-  max-width: 100%;
+    overflow: hidden;
+    max-width: 100%;
+    margin-left: 150px;
+    margin-bottom: -15px!important;
+    padding-bottom: 0px!important;
 }
 
 .field-slideshow-slide, .field-slideshow-slide a, .field-slideshow-slide img {
-  max-width: 100%;
-  height: auto !important;
-  width: auto !important;
+    max-width: 100%;
+    height: auto !important;
+    width: auto !important;
 }
 
 .region-content ul.field-slideshow-pager {
-  list-style-type: none;
-  padding: 0;
-  overflow: hidden;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
 }
 
 .field-slideshow-pager li {
-  float: left;
-  margin-right: 5px;
+    float: left;
+    margin-right: 5px;
 }
 
 .jcarousel-clip {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .field-slideshow-carousel li {
-  opacity: 0.6;
+    opacity: 0.6;
 }
 .field-slideshow-carousel li.activeSlide {
-  opacity: 1;
+    opacity: 1;
 }
 
 .field-slideshow-carousel-wrapper .hidden {
-  display: none;
-  visibility: hidden;
+    display: none;
+    visibility: hidden;
 }
 
 .field-slideshow-controls .play {
-  display: none;
+    display: none;
+}
+
+.field-slideshow-wrapper {
+    text-align: center;
+}
+
+.field-slideshow-caption {
+    max-width: 280px;
 }
