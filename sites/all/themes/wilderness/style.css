@@ -1414,11 +1414,6 @@ ul li.collapsed, ul li.leaf {
     font-weight: bold;
 }
 
-.view-display-id-page_1 .views-field-title .field-content a {
-    text-decoration: none;
-    font-size: 18px;
-}
-
 .view-display-id-page_1 .views-row,
 .view-display-id-page .views-row {
     margin-bottom: 20px;
@@ -1427,8 +1422,12 @@ ul li.collapsed, ul li.leaf {
     border-radius: 20px;
 }
 
-.search-info {
-    display: none;
+.view-display-id-page .views-row .views-field-title,
+.view-display-id-page_1 .views-row .views-field-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 .BlockContent .view-id-news .field-content a {
@@ -1449,4 +1448,8 @@ ul li.collapsed, ul li.leaf {
 .old-logo {
     margin-top: -15px;
     margin-left: 20px;
+}
+
+.search-info {
+    display: none;
 }
