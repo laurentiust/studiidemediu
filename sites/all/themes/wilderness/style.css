@@ -1419,7 +1419,8 @@ ul li.collapsed, ul li.leaf {
     font-size: 18px;
 }
 
-.view-display-id-page_1 .views-row {
+.view-display-id-page_1 .views-row,
+.view-display-id-page .views-row {
     margin-bottom: 20px;
     border: 1px solid #007700;
     padding: 15px;
@@ -1435,9 +1436,10 @@ ul li.collapsed, ul li.leaf {
     margin-top: -10px;
 }
 
-.BlockContent .view-id-news .views-field-title {
+.BlockContent .view-id-news .views-field-title,
+.BlockContent .view-id-documentatie .views-field-title {
     margin-top: -5px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .BlockContent .view-id-news .views-field-created {
