@@ -1,14 +1,26 @@
 <div class="PageBackgroundGlare">
-  <div class="social-links-container">
-    <div class="social-links">
-      <img src="<?php echo $base_path; ?>sites/all/themes/wilderness/images/facebook_icon.png" class="social-links" style="margin-top: 42px;">
-      <img src="<?php echo $base_path; ?>sites/all/themes/wilderness/images/googlePlusCircle.png" class="social-links">
-      <img src="<?php echo $base_path; ?>sites/all/themes/wilderness/images/twitter_icon.png" class="social-links">
-    </div>
-  </div>
   <div class="PageBackgroundGlareImage"></div>
 </div>
 <div class="Main">
+  <div class="social-links-container">
+    <div class="social-links">
+      <div id="facebook">
+        <a href="http://www.facebook.com" target="_blank">
+          <img src="<?php echo $base_path; ?>sites/all/themes/wilderness/images/facebook_icon.png" class="social-links">
+        </a>
+      </div>
+      <div id="googleplus">
+        <a href="https://plus.google.com/" target="_blank">
+          <img src="<?php echo $base_path; ?>sites/all/themes/wilderness/images/googlePlusCircle.png" class="social-links">
+        </a>
+      </div>
+      <div id="twitter">
+        <a href="https://twitter.com/" target="_blank">
+          <img src="<?php echo $base_path; ?>sites/all/themes/wilderness/images/twitter_icon.png" class="social-links">
+        </a>
+      </div>
+    </div>
+  </div>
   <div class="Sheet">
     <div class="Sheet-tl"></div>
     <div class="Sheet-tr"></div>
@@ -22,8 +34,11 @@
     <div class="Sheet-body">
       <div class="Header">
         <div id="slogan-stdm">
-          <p class="firm-description">Experienta, Dedicatiem Profesionalism:</p>
-          <p class="firm-name"><strong>Unitatea de suport pentru integrare</strong></p>
+          <p class="firm-description">Experienta, Dedicatie, Profesionalism:</p>
+          <div class="old-logo">
+          <img src="<?php echo $base_path; ?>sites/all/themes/wilderness/images/usilogo.gif" width="95px" class="old-logo-image">
+          </div>
+          <p class="firm-name"><strong>Unitatea de Suport pentru Integrare</strong></p>
         </div>
         <div class="logo">
           <?php if ($logo): ?>
@@ -80,7 +95,7 @@
       <div class="cleared"></div>
       <div class="Footer">
         <div class="Footer-inner" style="float: left;">
-          <div class="Footer-text"><p>Unitatea de suport pentru integrare Ⓡ 2013 </p></div>
+          <div class="Footer-text"><p>Unitatea de suport pentru integrare Ⓡ 2014 </p></div>
           <div class="Footer-background"></div>
         </div>
       </div>

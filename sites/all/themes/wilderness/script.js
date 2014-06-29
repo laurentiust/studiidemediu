@@ -1,9 +1,3 @@
-// $Id: script.js,v 1.1.2.1 2009/07/06 08:03:14 agileware Exp $
-
-/* begin Page */
-
-/* Generated with Artisteer version 2.1.0.16090, file checksum is 0287F487. */
-
 var artEventHelper = {
   'bind' : function (obj, evt, fn) {
     if (obj.addEventListener)
@@ -14,7 +8,6 @@ var artEventHelper = {
       obj['on' + evt] = fn;
   }
 };
-
 var artLoadEvent = (function() {
   var userAgent = navigator.userAgent.toLowerCase();
   var browser = {
@@ -24,9 +17,7 @@ var artLoadEvent = (function() {
     msie: /msie/.test(userAgent) && !/opera/.test(userAgent),
     mozilla: /mozilla/.test(userAgent) && !/(compatible|webkit)/.test(userAgent)
   };
-
   var list = [];
-
   var done = false;
   var ready = function () {
     if (done) return;
@@ -34,10 +25,8 @@ var artLoadEvent = (function() {
     for (var i = 0; i < list.length; i++)
       list[i]();
   };
-  
   if (document.addEventListener && !browser.opera)
     document.addEventListener('DOMContentLoaded', ready, false);
-  
   if (browser.msie && window == top) {
     (function () {
       try {
@@ -48,9 +37,7 @@ var artLoadEvent = (function() {
       }
       ready();
     })();
-  }
-  
-  if (browser.opera) {
+  }  if (browser.opera) {
     document.addEventListener('DOMContentLoaded', function () {
       for (var i = 0; i < document.styleSheets.length; i++) {
         if (document.styleSheets[i].disabled) {
@@ -61,7 +48,6 @@ var artLoadEvent = (function() {
       ready();
     }, false);
   }
-  
   if (browser.safari) {
     var numStyles;
     (function(){
@@ -83,23 +69,19 @@ var artLoadEvent = (function() {
       ready();
     })();
   }
-
   artEventHelper.bind(window, 'load', ready);
-
   return ({
     add: function(f) {
       list.push(f);
     }
   })
 })();
-
 (function () {
   // fix ie blinking
   var m = document.uniqueID && document.compatMode && !window.XMLHttpRequest && document.execCommand;
   try{ if(!!m) { m("BackgroundImageCache", false, true); } }
   catch(oh){};
 })();
-
 function xGetElementsByClassName(clsName, parentEle, tagName) {
   var elements = null;
   var found = [];
@@ -117,7 +99,6 @@ function xGetElementsByClassName(clsName, parentEle, tagName) {
   }
   return found;
 }
-
 var styleUrlCached = null;
 function GetStyleUrl() {
   if (null == styleUrlCached) {
@@ -130,7 +111,6 @@ function GetStyleUrl() {
         return styleUrlCached = l.href.replace(/style\.css(\?.*)?$/,'');
       }
     }
-    
     ns = document.getElementsByTagName('style');
     for (var i = 0; i < ns.length; i++) {
       var matches = new RegExp('import\\s+"([^"]+\\/)style\\.css"').exec(ns[i].innerHTML);
@@ -140,10 +120,7 @@ function GetStyleUrl() {
   }
   return styleUrlCached;
 }
-
-
-function artButtonSetupJsHover(btn)
-{
+function artButtonSetupJsHover(btn){
     artEventHelper.bind(btn, 'mouseover', function() {
         var spans = btn.getElementsByTagName("span");
         if (spans.length > 0)
@@ -165,7 +142,6 @@ function artButtonSetupJsHover(btn)
             spans[0].className = spans[0].className.replace(/active/, "");
     });
 }
-
 function artButtonsSetupJsHover() {
   var elements = xGetElementsByClassName("btn", document, "span");
   for (var i = 0; i < elements.length; i++) {
@@ -174,12 +150,7 @@ function artButtonsSetupJsHover() {
   }
 }
 artLoadEvent.add(artButtonsSetupJsHover);
-
-/* end Page */
-
-/* begin Menu */
-function Insert_Separators()
-{
+function Insert_Separators(){
   var menus = xGetElementsByClassName("artmenu", document);
   for (var i = 0; i < menus.length; i++) {
     var menu = menus[i];
@@ -199,7 +170,6 @@ function Insert_Separators()
   }
 }
 artLoadEvent.add(Insert_Separators);
-
 function Menu_IE6Setup() {
   var isIE6 = navigator.userAgent.toLowerCase().indexOf("msie") != -1 
     && navigator.userAgent.toLowerCase().indexOf("msie 7") == -1;
@@ -231,27 +201,19 @@ function Menu_IE6Setup() {
   }
 }
 artLoadEvent.add(Menu_IE6Setup);
-/* end Menu */
-
-
-
 artLoadEvent.add(function() {
     // select all tables with table class
     var formButtons = document.getElementsByTagName('button');
     for (var i = 0; i < formButtons.length; i++) {
         var button = formButtons[i];
-
         button.buttonName = button.getAttribute('name');
         button.buttonValue = button.getAttribute('value');
         button.prevOnClick = button.onclick;
-
         if (button.outerHTML) {
             var re = /\bvalue="([^"]+)"/i;
             button.buttonValue = re.test(button.outerHTML) ? re.exec(button.outerHTML)[1] : button.buttonValue;
         }
-
         button.setAttribute("name", "_" + button.buttonName);
-
         button.onclick = function() {
             if (this.prevOnClick) this.prevOnClick.apply(this);
             var f = this;

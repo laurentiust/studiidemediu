@@ -10,6 +10,7 @@ regions[navigation] = Menu
 regions[copyright] = Copyright
 stylesheets[all][] = style.css
 scripts[] = script.js
+scripts[] = social.js
 features[] = logo
 features[] = mission
 features[] = comment_user_picture
