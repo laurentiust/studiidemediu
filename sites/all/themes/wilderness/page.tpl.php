@@ -95,7 +95,10 @@
       <div class="cleared"></div>
       <div class="Footer">
         <div class="Footer-inner" style="float: left;">
-          <div class="Footer-text"><p>Unitatea de suport pentru integrare Ⓡ 2014 </p></div>
+          <div class="Footer-text">
+            <p class="copyright"> <?php print t('Copyright '); ?> &copy; <?php echo date("Y") . ' www.studiidemediu.ro'?> </p>
+            <p class="credits"> <?php print t('Designed and developed by'); ?>  <a href="http://www.netit.ro" target="_blank">NetIT®</a></p>
+          </div>
           <div class="Footer-background"></div>
         </div>
       </div>
