@@ -8,3 +8,4 @@ sites/*/private
 .idea/*
 .idea/vcs.xml
 .idea/workspace.xml
+development/*
