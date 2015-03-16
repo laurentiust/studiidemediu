@@ -10,3 +10,4 @@ sites/*/private
 .idea/workspace.xml
 development/*
 cache/*
+cache/*
