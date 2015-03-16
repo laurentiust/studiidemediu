@@ -39,6 +39,7 @@
   <head>
     <?php global $base_path; ?>
     <title><?php print $head_title ?></title>
+    <meta name=viewport content="width=1100, initial-scale=1">
     <?php print $head ?>
     <?php print $styles ?>
     <?php print $scripts ?>
